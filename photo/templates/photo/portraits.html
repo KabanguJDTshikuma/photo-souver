@@ -1,0 +1,44 @@
+{% extends 'photo/base.html' %}
+
+{% block content %}
+
+
+<!-- <section class="gallery py-5">
+		
+	<div class="container py-md-4 mt-md-3">
+		<div class="agile_gallery_grids w3-agile demo mt-md-5 pt-4">
+				{% for pic in portraits %}	
+			<div class="gallery_sec" id="gallery">
+				<a target="_blank" href="{{ pic.portrait_detail.url }}">
+					<img src="{{ pic.portrait_detail.url }}" class="img-fluid" alt="Responsive image">
+				</a>
+			</div>
+			{% endfor %}
+			
+		</div>
+	</div>
+
+</section> -->
+
+<section class="gallery py-5">
+		<div class="container py-md-4 mt-md-3">
+			<div class="wthree_head_section">
+				<h2 class="w3l_header">Gallery </h2>
+			</div>
+			<div class="row agile_gallery_grids w3-agile demo mt-md-5 pt-4">
+					{% for pic in portraits %}
+				<div class="col-md-4 gal-sec">
+					<div class="gallery-grid1">
+						<a title="Nulla porttitor accumsana." href="{{ pic.portrait_detail.url }}">
+							<img src="{{ pic.portrait_detail.url }}" alt=" " class="img-responsive" />
+						</a>
+					</div>
+				</div>
+				{% endfor %}
+	
+			</div>
+		</div>
+	</section>
+
+
+{% endblock %}
