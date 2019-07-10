@@ -10,21 +10,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <script type="application/x-javascript">
-		addEventListener("load", function () {
-			setTimeout(hideURLbar, 0);
-		}, false);
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
 
-		function hideURLbar() {
+        function hideURLbar() {
             window.scrollTo(0, 1);
-		}
-	</script>
+        }
+    </script>
 
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" type="text/css" media="all">
     <link rel="stylesheet" href="{% static 'css/chocolat.css' %}" type="text/css" media="screen">
 
     <link href="{% static 'css/fontawesome-all.css' %}" rel="stylesheet">
     <!-- //font-awesome icons -->
-	<link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}" />
 
     <link href="{% static 'css/style.css' %}" rel='stylesheet' type='text/css' media="all">
 
@@ -78,13 +78,16 @@
                                     <li class="nav-item {{ portrait_page }}">
                                         <a href="{% url 'portrait' %}" class="nav-link ">Portrait</a>
                                     </li>
+                                    <li class="nav-item {{ wedding_page }}">
+                                        <a href="{% url 'wedding' %}" class="nav-link ">Wedding</a>
+                                    </li>
 
-                                    <li class="nav-item">
+                                    <!-- <li class="nav-item">
                                         <a href="#" class="nav-link">Contact</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="#" class="nav-link">About</a>
-                                    </li>
+                                    </li> -->
                                 </ul>
 
 
@@ -123,7 +126,7 @@
         <div class="container py-md-4" id="footer">
             <div class="row footer-top">
 
-                <div class="col-lg-3 col-md-6 col-sm-6 footer-grid_section_1its_w3">
+                <div class="col-lg-6 footer-grid_section_1its_w3">
                     <div class="footer-title">
                         <h3>Contact Info</h3>
                     </div>
@@ -133,7 +136,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-6 col-sm-6 footer-grid_section_1its_w3">
+                <div class="col-lg-6 col-sm-6 footer-grid_section_1its_w3">
                     <div class="footer-title">
                         <h3>Phone</h3>
                     </div>
@@ -145,8 +148,8 @@
                     </div>
                 </div>
             </div>
-            <div class="copyright pt-4 mt-4">
-                <p>© 2019 Photo Souvenir. All Rights Reserved | Design by JDKaba</p>
+            <div class="copyright pt-4 mt-4 text-center">
+                <p>© 2019 Photo Souvenir</p>
             </div>
         </div>
     </section>
@@ -188,7 +191,9 @@
             };
         */
 
-        $().UItoTop({ easingType: 'easeOutQuart' });
+        $().UItoTop({
+            easingType: 'easeOutQuart'
+        });
 
     });
 </script>
@@ -199,7 +204,9 @@
     jQuery(document).ready(function ($) {
         $(".scroll").click(function (event) {
             event.preventDefault();
-            $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+            $('html,body').animate({
+                scrollTop: $(this.hash).offset().top
+            }, 1000);
         });
     });
 </script>
